@@ -7,9 +7,9 @@ Install Plugin for read Code Qr
 cordova plugins add https://github.com/wildabeast/BarcodeScanner.git
 ```
 
-Add Jquery and Jquery Mobile
-[jQuery] - Oficial Web
-[jQuery-Mobile] - A Touch-Optimized Web Framework
+Add Jquery and Jquery Mobile:
+* [jQuery] - Oficial Web
+* [jQuery-Mobile] - A Touch-Optimized Web Framework
 
 
 

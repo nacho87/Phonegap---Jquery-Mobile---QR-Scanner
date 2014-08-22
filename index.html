@@ -39,7 +39,8 @@
           <p>Puedes leer codigos QR para asi agregarlos a tus bibliotecas de recetas.</p>
         </div>
         <div>
-          <a class="ui-btn ui-corner-all ui-icon-search ui-btn-icon-left " href="">Nueva Receta</a>
+          <a class="ui-btn ui-corner-all ui-icon-search ui-btn-icon-left" id="startScan" href="">Nueva Receta</a>
+          <div id="results"></div>
         </div>
         <ul data-role="listview" data-ajax="false" data-inset="true" data-theme="a">
           <li data-role="list-divider">Recetas Disponibles</li>
@@ -50,8 +51,8 @@
         <ul data-role="listview" data-inset="true">
           <li data-role="list-divider">Recetas Disponibles</li>
           <li><a href="#">
-              <img src="../_assets/img/album-bb.jpg">
-          <h2>Broken Bells</h2>
+              <img src="http://www.cocinerosargentinos.com/images/1_crepesdeespinacayricota.jpg">
+          <h2>Crepes de espinaca y ricota</h2>
           <p>Broken Bells</p></a>
           </li>
           <li><a href="#">
@@ -79,7 +80,6 @@
             <h3>Crepes de espinaca y ricota</h3>
           </div>
           <div class="ui-body ui-body-a">
-            <p>Content</p>
             <figure>
               <img src="http://www.cocinerosargentinos.com/images/1_crepesdeespinacayricota.jpg" alt="crepes de espinaca y ricota">
             </figure>

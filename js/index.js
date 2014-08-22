@@ -34,6 +34,30 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        var resultDiv;
+
+        document.addEventListener("deviceready", init, false);
+        function init() {
+            document.querySelector("#startScan").addEventListener("touchend", startScan, false);
+            resultDiv = document.querySelector("#results");
+        };
+
+        function startScan() {
+
+            cordova.plugins.barcodeScanner.scan(
+                function (result) {
+                  if(result.text != '' ){
+                    var s = '<a data-role="button" class="ui-page-theme-b ui-link ui-btn ui-shadow ui-corner-all" href="#'+result.text+'">Nueva Receta</a>';
+                    resultDiv.innerHTML = s;
+                    
+                  }
+                }, 
+                function (error) {
+                    alert("Scanning failed: " + error);
+                }
+            );
+
+        };
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
